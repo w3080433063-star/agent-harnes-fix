@@ -24,6 +24,7 @@ describe("Renderer settings foundation", () => {
       "Connections",
       "Accounts",
       "Session Import",
+      "Harness comparison",
       "Updates",
       "About",
     ]);
@@ -31,6 +32,7 @@ describe("Renderer settings foundation", () => {
       "connections",
       "accounts",
       "session-import",
+      "diagnose",
       "updates",
       "about",
     ]);
@@ -64,6 +66,7 @@ describe("Renderer settings foundation", () => {
       "connections",
       "accounts",
       "session-import",
+      "harness-lab",
       "updates",
       "about",
     ]);

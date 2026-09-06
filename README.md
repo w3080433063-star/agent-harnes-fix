@@ -2,6 +2,8 @@
 
 # CodexHost
 
+> 此为独立桌面扩展分支。新增功能、Windows 启动方式和验证范围见 [DESKTOP-EXTENSIONS.md](DESKTOP-EXTENSIONS.md)。保留上游许可证和下方原始说明。
+
 **在 Codex Desktop 中运行 Pi 和其他 Harness**
 
 我们认为 **Codex Desktop** 提供了目前最好的桌面开发交互体验。

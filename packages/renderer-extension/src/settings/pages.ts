@@ -1,3 +1,5 @@
+import { createHarnessLabPage } from "./harness-lab-page.js";
+import type { HarnessLabClient } from "./harness-lab.js";
 import type {
   UpdateCheckResult,
   UpdateInstallation,
@@ -73,6 +75,7 @@ export const DEFAULT_RENDERER_SETTINGS_PAGE_IDS = [
   "connections",
   "accounts",
   "session-import",
+  "harness-lab",
   "updates",
   "about",
 ] as const;
@@ -582,11 +585,13 @@ export function createDefaultRendererSettingsPages(
   getSessionImportClient: () => RendererSessionImportClient | null = () => null,
   openImportedThread: RendererImportedThreadOpener = () =>
     Promise.reject(new Error("Imported Thread navigation is unavailable")),
+  getHarnessLabClient: () => HarnessLabClient | null = () => null,
 ): readonly RendererSettingsPageDefinition[] {
   return Object.freeze([
     createConnectionsSettingsPage(messages, getDiagnostics),
     createAccountsSettingsPage(messages, getAccountClient),
     createSessionImportSettingsPage(messages, getSessionImportClient, openImportedThread),
+    createHarnessLabPage(messages, getHarnessLabClient),
     updatesPage(messages, getUpdateClient),
     aboutPage(messages),
   ]);
